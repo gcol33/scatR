@@ -16,7 +16,7 @@
 #'   \item{sampling}{Spatial structure attributable to sampling only}
 #'   \item{shared}{Shared structure (the confounding)}
 #'   \item{variance_partition}{Proportion of variance in each component}
-#'   \item{coupling}{Posterior for β_share}
+#'   \item{coupling}{Posterior for beta_share}
 #'
 #' @export
 #'
@@ -27,9 +27,9 @@
 #'
 #' # Variance partitioning
 #' decomp$variance_partition
-#' # → ecological_only: 0.42
-#' # → sampling_only:   0.24
-#' # → shared:          0.34
+#' # ecological_only: 0.42
+#' # sampling_only:   0.24
+#' # shared:          0.34
 #' }
 scatter_decomposition <- function(fit, locations = NULL, summary = TRUE) {
   if (!inherits(fit, "scatr_fit")) {
@@ -47,7 +47,7 @@ print.scatr_decomposition <- function(x, ...) {
   cat("  Ecological only:", sprintf("%.1f%%", x$variance_partition$ecological * 100), "\n")
   cat("  Sampling only:  ", sprintf("%.1f%%", x$variance_partition$sampling * 100), "\n")
   cat("  Shared:         ", sprintf("%.1f%%", x$variance_partition$shared * 100), "\n")
-  cat("\nCoupling strength (β_share):\n")
+  cat("\nCoupling strength (beta_share):\n")
   cat("  Mean:", sprintf("%.3f", x$coupling$mean), "\n")
   cat("  95% CI: [", sprintf("%.3f", x$coupling$lower),
       ",", sprintf("%.3f", x$coupling$upper), "]\n")

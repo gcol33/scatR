@@ -39,8 +39,7 @@
 #'   \item{family}{Distribution family}
 #'   \item{data}{Original data}
 #'   \item{locations}{Observation locations}
-#'   \item{backend}{Inference backend used
-}
+#'   \item{backend}{Inference backend used}
 #'   \item{diagnostics}{MCMC diagnostics}
 #'   \item{decomposition}{Ecological/sampling/shared decomposition}
 #'
